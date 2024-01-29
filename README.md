@@ -9,6 +9,7 @@
     - Visual Studio Code 설치
     - Git 설치
         - TortoiseGit 설치
+        - Github 가입
         - Github Desktop 설치
 
 - 파이썬 기초
