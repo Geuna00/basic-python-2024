@@ -12,7 +12,7 @@
         - Github 가입           https://github.com/
         - Github Desktop 설치   https://desktop.github.com/
 
-- 파이썬 기초
+- 파이썬 기초(개발자 : 귀도 반 로썸)
     - 콘솔출력
     - 주석
     - 변수
@@ -32,6 +32,9 @@
 ## 2일차
 - 파이썬 기초
     - 흐름제어
+        - if : 참/거짓으로 조건 분기
+        - for : 반복문 기본
+        - while
     - 복합자료형 + 연산자
     - 함수
     - 구구단, 별 찍기
