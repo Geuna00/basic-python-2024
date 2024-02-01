@@ -90,8 +90,15 @@
             print('[오류] 제수는 0이 될 수 없습니다.')
             return 0
         ```
-
     - 텍스트 파일 입출력
+
+    ```python
+    f = open('파일명', mode='r|w|a', encoding='cp949|utf-8')
+    f.read()
+    f.readline() # 읽기
+    f.wrtie('text') # 쓰기
+    f.close() # 반드시 파일을 닫을 것
+    ```
 - 파이썬 활용
     - 주피터 노트북
 
