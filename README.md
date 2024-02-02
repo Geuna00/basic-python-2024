@@ -99,13 +99,23 @@
     f.wrtie('text') # 쓰기
     f.close() # 반드시 파일을 닫을 것
     ```
-- 파이썬 활용
+- 파이썬 응용
     - 주피터 노트북
         - Ctrl + Shift + P(명령팔레트)로 시작
         - 사용방법 (test31_jupyternb.ipynb) 참조
     - folium 기본 사용
+    ![folium사용법](https://raw.githubusercontent.com/HyungJuu/basic-python-2024/main/images/python_001.png)
+
+## 5일차
+- 파이썬 응용
+    - 주피터 노트북 활용 - 구글 코랩(Colab)
 
 
+
+
+
+
+    - 가상환경
     - 객체지향(나중에...)
         - 오버로딩, 오버라이딩(재정의)
         - 상속, 다중상속
