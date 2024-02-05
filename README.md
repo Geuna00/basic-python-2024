@@ -132,7 +132,26 @@
 
     ![스레드예제](https://raw.githubusercontent.com/HyungJuu/basic-python-2024/main/images/python_003.gif)
 
+    ```python
+    # 스레드 클래스에서 시그널 선언
+    class BackWorker(QThread): # PyQt에서 스레드 클래스 상속
+        initSignal = pyqtSignal(int) # 시그널을 UI스레드로 전달하기 위한 변수객체
+        # ...
 
+        def run(self) -> None: # 스레드 실행
+            # 스레드로 동작할 내용
+            maxVal = 100001
+            self.initSignal.emit(maxVal) # emit() : UI 스레드로 보내기
+            # ...
+
+    class qtwin_exam(QWidget): # UI 스레드
+        # ...
+        def btnStartClicked(self):
+            th = BackWorker(self)
+            th.start() # BackWorker 내의 self.run() 실행
+            th.initSignal.connect(self.initPgbTask) # 스레드에서 초기화 시그널이 오면 initPgbTask 슬롯함수가 대신 처리
+            # ...
+    ```
 
     - 가상환경
 
