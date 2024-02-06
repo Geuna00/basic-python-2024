@@ -159,7 +159,28 @@
             self.pgbTask.setRange(0, maxVal-1)
     ```
 
-    - 가상환경
+## 7일차
+- 파이썬 응용
+    - 객체지향
+        - 상속, 오버라이딩(재정의), 오버로딩만 공부하면 됨!
+            - 오버로딩 : 같은 이름의 함수를 여러번 사용하는 것(매개변수가 다르면 다양하게 사용 가능)
+            
+            ```python
+            class qtwin_exam(QWidget): # 상속
+                # ...
+
+                # QWidget에 있는 closeEvent를 그대로 쓰면 그냥 닫힘
+                # 닫을지 말지 한번더 물어보는 형태로 다시 구현하고 싶음(재정의 : Override)
+                def closeEvent(self, QCloseEvent) -> None: # X버튼 종료확인 (재정의)
+                    re = QMessageBox.question(self, '종료확인','종료하시겠습니까?', QMessageBox.Yes|QMessageBox.No)
+                    if re == QMessageBox.Yes: # 닫기
+                        QCloseEvent.accept()           
+                    else:
+                        QCloseEvent.ignore() 
+            ```
+    - 가상환경 Virtualenv
+    - PyQt5와 응용예제 연습
+
 
 
 
