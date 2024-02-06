@@ -16,12 +16,15 @@ class WinApp(QWidget):
 
     def initUI(self):
         # 이미지 삽입 .scaledToWidth(800) 큰 해상도를 w800으로 고정
-        pixmap = QPixmap('./images/kitty02.jpg').scaledToWidth(800)
+        pixmap = QPixmap('./images/kitty.jpg').scaledToWidth(800)
         lblImage = QLabel(self)
         lblImage.setPixmap(pixmap)
 
         lblSize = QLabel(self)
+        lblSize.setFont(QFont('NanumGothicCoding', 15)) # 폰트와 폰트사이즈
+        lblSize.setStyleSheet('Color : #0000ff;')
         lblSize.setText(f'{pixmap.width()} x {pixmap.height()}') # kitty.jpg의 width x height
+        lblSize.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter) # 가로중앙정열 | 세로중앙정렬
 
         vbox = QVBoxLayout(self) # QtDesigner에서 VerticalLayout 위젯 생성
         vbox.addWidget(lblImage) # VL(VerticalLayout)에 위젯 추가
@@ -30,7 +33,9 @@ class WinApp(QWidget):
 
         self.setWindowIcon(QIcon('./images/iot.png'))
         self.setWindowTitle('이미지 뷰어')
-        self.setGeometry(300, 300, 300, 300)
+        rect= QRect(300, 300, 300, 300) # x, y, w, h
+        self.setGeometry(rect) # 같은 이름의 함수를 여러개 선언해놓고 입맛에 맞게 골라쓰는 BR(오버로딩)
+        # self.setGeometry(300, 300, 300, 300)
         self.setCenter()
         self.show() # showFullScreen() 모니터를 꽉 채워서 출력
 
