@@ -128,7 +128,7 @@
     - PyQt5 기본실행
     - QtDesigner 사용법
     - 🌟스레드 학습 : UI스레드와 Background스레드 분리
-        - GIL, 병렬프로세싱 더 학습할 것
+        - [ ] GIL, 병렬프로세싱 더 학습할 것
 
     ![스레드예제](https://raw.githubusercontent.com/HyungJuu/basic-python-2024/main/images/python_003.gif)
 
@@ -189,7 +189,7 @@
 ## 8일차
 - 파이썬 응용
     - PyQt5 응용예제 계속
-    
+
 - 파이썬 기본 코딩테스트
 
 
